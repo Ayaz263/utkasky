@@ -11,7 +11,7 @@ android.permissions = INTERNET, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
 source.include_exts = py,png,jpg,kv,atlas,pc
 
 # --- Требования (ffpyplayer удален) ---
-requirements = python3, kivy, pillow, requests, filetype
+requirements = python3==3.9.10,kivy,pillow,requests,filetype
 
 buildozer.build_mode = debug
 icon.filename = %(source.dir)s/ni.png
