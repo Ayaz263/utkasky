@@ -1,0 +1,40 @@
+!git clone https://github.com/Ayaz263/utkasky
+
+!sudo apt-get update
+!sudo apt-get install python3.9 python3.9-dev python3.9-venv
+
+
+!curl -sS bootstrap.pypa.io | python3.9
+
+
+!python3.9 -m pip install --upgrade pip setuptools wheel
+!python3.9 -m pip install buildozer kivy virtualenv pillow requests filetype Cython==0.29.19
+
+
+!rm -rf .buildozer/ bin/
+
+
+# Запускаем buildozer через установленный python3.9
+!python3.9 -m buildozer android debug
+
+
+!python3.9 -m pip install Cython==0.29.33 --force-reinstall
+
+
+!rm -rf .buildozer/ bin/
+
+!python3.9 -m buildozer android debug
+
+
+!rm -rf .buildozer/
+!rm -rf bin/
+
+
+# 1. Удаляем все кэши Buildozer и папки сборки
+!rm -rf .buildozer/
+!rm -rf bin/
+
+# 2. (Опционально) Если вы скачивали скрипт установки зависимостей, его тоже можно удалить
+!rm install-kivy-buildozer-dependencies.sh
+
+!buildozer clean
