@@ -45,7 +45,7 @@ class ConnectScreen(Screen):
         
         content_layout.add_widget(Label(text="Введите данные сервера и ваше имя", color=TEXT_COLOR))
 
-        self.isuasd = Label(text="надо писать в ip 192.168.191.125")
+        self.isuasd = Label(text="надо писать в ip 62.133.170.95")
         content_layout.add_widget(self.isuasd)
         self.bind(info_text_ip=self.isuasd.setter('text')) 
         
